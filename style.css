@@ -1,0 +1,335 @@
+@charset "UTF-8";
+/*fonte importada */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto:wght@400;700&display=swap');
+
+/*Configurações padrão do site*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Roboto",sans-serif;
+}
+
+:root {
+    --cor0: #614c4c;
+    --cor1: #111111;
+    --cor2: #fffcfc;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 500px;
+    background-color: var(--cor0);
+}
+
+.content {
+    max-width: 800px;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 50px;
+    color: var(--cor2);
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: var(--cor2);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--cor1);
+}
+
+nav ul button {
+    border: 1px solid var(--cor2);
+    background: transparent;
+    padding: 8px 40px;
+    cursor: pointer;
+    margin-left: 30px;
+    color: var(--cor2);
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+nav ul button:hover {
+    transition: background, color 0.6s;
+    background: var(--cor2);
+    color: var(--cor1);
+}
+
+.content .header-block {
+    max-width: 800px;
+    min-width: 300px;
+    height: 450px;
+    background: rgb(70, 41, 41);
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px 0px rgb(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgb(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgb(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+}
+
+.header-block img {
+    width: 50%;
+    position: absolute;
+    right: 2%;
+    bottom: 7%;
+    border-radius: 10%;
+}
+
+.header-block .text {
+    position: absolute;
+    bottom: 30%;
+    left: 15%;
+}
+
+.header-block .text h2 {
+    color: var(--cor2);
+    margin-bottom: 20px;
+    text-align: left;
+    transform: translateX(-20px);
+    transition: transform 0.5s;
+}
+
+.header-block .text p {
+    max-width: 280px;
+    color: var(--cor2);
+    text-align: left;
+    transform: translateX(-20px);
+    transition: transform 0.5s; 
+}
+
+/*produtos do catalogo*/
+
+section {
+    background-image: url(wallpaper001.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section .catalogo {
+    width: 100%;
+    padding: 100px;
+}
+
+section .filter-card {
+    width: 780px;
+    height: 150px;
+    background: var(--cor0);
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+    width: 600px;
+    height: 40px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    text-indent: 10px;
+}
+
+.search-button {
+    width: 140px;
+    height: 40px;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    background: rgba(0, 0, 255, 0.514);
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: 0.2s ease;
+}
+
+.search-button:hover {
+    background: #dedede;
+    color: blue;
+}
+
+.titlle-wrapper-catalog {
+    margin-top: 200px;
+    padding-bottom: 20px;
+}
+
+section .card-wrapper {
+    max-width: 800px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap:20px;
+    padding-top: 40px;
+}
+
+section .card-item {
+    background: rgba(70, 41, 41, 0.822);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-content {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-item img {
+    width: 75%;
+    margin-top: 15px;
+}
+
+.card-item h4 {
+    width: 80%;
+}
+
+.card-item p {
+    width: 80%;
+    font-style: italic;
+    color: black;
+}
+
+.card-item button {
+    width: 60%;
+    padding: 8px 0px;
+    border: none;
+    background: rgba(0, 0, 255, 0.514);
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 10px;    
+}
+
+.card-item button:hover {
+    background: #dedede;
+    color: blue;
+}
+
+/*About*/
+
+.about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+.about-content {
+    max-width: 800px;
+    min-width: 300px;
+    height: 600px;
+    background: #dedede3b;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    width: 25%;
+    min-width: 300px;
+    height: 100%;
+    border-radius: 8px;
+    background: white;
+}
+
+.left img {
+    width: 300px;
+    height: 590px;
+    opacity: 1;
+}
+
+.right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10%;
+}
+
+.right h3 {
+    text-align: right;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.right p {
+    max-width: 90%;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-align: right;
+    color: rgb(0, 0, 0, 0.8);
+}
+
+/*54:00*/
+
+.rodape p {
+    padding: 15px;
+    text-align: center;
+    background-color: var(--cor0);
+    color: white;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.rodape a:hover {
+    color: black;
+    text-decoration: underline;
+}
